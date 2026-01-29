@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaf & Bean | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Leaf & Bean</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="teas.html">Teas</a></li>
+                <li><a href="coffees.html">Coffees</a></li>
+                <li><a href="brew-guide.html">Brew Guide</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Art of Tea & Coffee</h1>
+            <p>A journal exploring the rich culture, varieties, and brewing techniques of the world's favorite beverages.</p>
+            <a href="#featured" class="btn">Explore Now</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <div class="card">
+                <p>At Leaf & Bean, we believe that tea and coffee are more than just beverages—they're experiences. Our mission is to explore and share the rich traditions, diverse flavors, and mindful brewing practices that make each cup a moment worth savoring.</p>
+                <p>From the misty mountains where tea leaves are harvested to the sun-drenched hills where coffee cherries ripen, we trace the journey of these remarkable plants from source to cup.</p>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-section">
+            <h2>Featured Selections</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-image tea-bg"></div>
+                    <div class="card-content">
+                        <h3>Japanese Sencha Green Tea</h3>
+                        <p>A vibrant green tea with a delicate balance of sweetness and astringency. Steamed to preserve its fresh, grassy notes and rich in antioxidants.</p>
+                        <a href="teas.html" class="card-link">Explore Teas <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image coffee-bg"></div>
+                    <div class="card-content">
+                        <h3>Ethiopian Yirgacheffe Coffee</h3>
+                        <p>Renowned for its complex floral and citrus notes, this light-roast coffee from Ethiopia's highlands offers a bright, tea-like body with jasmine aroma.</p>
+                        <a href="coffees.html" class="card-link">Explore Coffees <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image brew-bg"></div>
+                    <div class="card-content">
+                        <h3>Perfect Brewing Techniques</h3>
+                        <p>Discover the art of proper brewing. From water temperature to steeping time, learn how to extract the perfect flavor from your leaves and beans.</p>
+                        <a href="brew-guide.html" class="card-link">Brew Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Leaf & Bean</h3>
+                <p>A journal dedicated to the art and culture of tea and coffee.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="teas.html">Teas</a></li>
+                    <li><a href="coffees.html">Coffees</a></li>
+                    <li><a href="brew-guide.html">Brew Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Leaf & Bean. All rights reserved. | A journal about teas and coffees</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+</body>
+</html>
